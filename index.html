@@ -19,11 +19,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta charset="utf-8">
 
   <!-- Tells the browser what the title of this page should be. -->
-  <title>Resume</title>
+  <title>Amourie Fourie &#10084; - Curriculum Vitae</title>
 
   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet">
-
+  <link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
   Document Object Model (DOM). The DOM is a tree that contains information
@@ -46,39 +47,46 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-<!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+ <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <meta name="viewport" content="width=device-width">
 </head>
 <body>
   <div id="main">
-    Hello world!   <!-- You'll be deleting this line in the course -->
-
     <!--
     Everything from here to the <script> tag below is the skeleton of your
     website. Your code will add information to each of the sections of the
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
+    <div id="header" class="center-content clear-fix section">
+
+    </div>
+    <div class="header-contacts">
+    <h2 class="orange">Let's Connect</h2>
+    <ul id="topContacts" class="flex-box"></ul>
+  </div>
+    <div id="skillsDiv" class="section">
+
     </div>
     <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
+    <div id="workExperience" class="section">
       <h2>Work Experience</h2>
     </div>
-    <div id="projects">
+    <div id="projects" class="section">
       <h2>Projects</h2>
     </div>
-    <div id="education" class="gray">
+    <div id="education" class="education-entry section" >
       <h2>Education</h2>
     </div>
-    <div id="mapDiv">
+    <div class="section">
       <h2>Where I've Lived and Worked</h2>
+      <div id="mapDiv">
+      </div>
     </div>
-    <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
+    <div id="lets-connect" class="footer">
+      <h2 class="orange">Let's Connect</h2>
+        <ul id="footerContacts" class="flex-box footer-contacts">
       </ul>
     </div>
   </div>
@@ -115,22 +123,26 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
 
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
+        document.getElementById('topContacts').style.display = 'none';
     }
     if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
+        document.getElementById('header').style.display = 'none';
     }
     if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
+
+       document.getElementById('workExperience').style.display = 'none';
+
     }
     if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
+        document.getElementById('projects').style.display = 'none';
     }
     if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
+
+          document.getElementById('education').style.backgroundColor = 'red';
+        document.getElementById('education').style.borderColor = "green";
     }
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.display = 'none';
+        document.getElementById('lets-connect').style.display = 'none';
     }
     if(document.getElementById('map') === null) {
       document.getElementById('mapDiv').style.display = 'none';
